@@ -29,21 +29,24 @@ export default function Card({
 
             <div className="card-content">
         <div className="card-meta">
-          {author && (
-            <span className="card-author">{author}</span>
-          )}
-          {date && (
-            <>
-              {author && <span> · </span>}
-              <time className="card-date" dateTime={date}>
-                {new Date(date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric'
-                })}
-              </time>
-            </>
-          )}
+          <div className="meta-left">
+            {author && (
+              <span className="card-author">{author}</span>
+            )}
+            {date && (
+              <>
+                {author && <span> · </span>}
+                <time className="card-date" dateTime={date}>
+                  {new Date(date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </time>
+              </>
+            )}
+          </div>
+          <div className="card-arrow">→</div>
         </div>
 
         <h3 className="card-title">{title}</h3>

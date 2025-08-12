@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getProjects } from '../lib/github';
-import ThemeToggle from '../components/ThemeToggle';
+import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import CardGrid from '../components/CardGrid';
 
@@ -8,17 +8,15 @@ export default function Home({ projects }) {
   return (
     <>
       <Head>
-        <title>Projects Portfolio</title>
+        <title>MNouk</title>
         <meta name="description" content="A minimalist showcase of personal projects" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="container">
-        <div className="theme-toggle-wrapper">
-          <ThemeToggle />
-        </div>
+            <Navigation />
 
+      <main className="container">
         <header className="header">
           <h1>Projects</h1>
           <p className="subtitle">

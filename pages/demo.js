@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import ThemeToggle from '../components/ThemeToggle';
+import Navigation from '../components/Navigation';
 import Card from '../components/Card';
 import CardGrid from '../components/CardGrid';
 
@@ -90,16 +90,14 @@ export default function Demo() {
   return (
     <>
       <Head>
-        <title>Card System Demo | Portfolio</title>
+        <title>Card System Demo | MNouk</title>
         <meta name="description" content="Demo of the modern card component system" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="container">
-        <div className="theme-toggle-wrapper">
-          <ThemeToggle />
-        </div>
+            <Navigation />
 
+      <main className="container">
         <header className="header">
           <h1>Card System Demo</h1>
           <p className="subtitle">
