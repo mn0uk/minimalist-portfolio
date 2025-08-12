@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { getProjects } from '../lib/github';
+import ThemeToggle from '../components/ThemeToggle';
 
 export default function Home({ projects }) {
   return (
@@ -13,6 +14,10 @@ export default function Home({ projects }) {
       </Head>
 
       <main className="container">
+        <div className="theme-toggle-wrapper">
+          <ThemeToggle />
+        </div>
+        
         <header className="header">
           <h1>Projects</h1>
           <p className="subtitle">
