@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { getProjectBySlug, getAllProjectSlugs } from '../../lib/github';
+import ThemeToggle from '../../components/ThemeToggle';
 
 export default function ProjectPost({ project }) {
   if (!project) {
@@ -24,6 +25,10 @@ export default function ProjectPost({ project }) {
       </Head>
 
       <main className="container">
+        <div className="theme-toggle-wrapper">
+          <ThemeToggle />
+        </div>
+        
         <nav className="breadcrumb">
           <Link href="/">← Back to Projects</Link>
         </nav>
