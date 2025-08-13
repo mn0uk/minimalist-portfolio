@@ -63,6 +63,13 @@ body {
 .nav-left {
   display: flex;
   align-items: center;
+  gap: 3rem;
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .nav-logo {
@@ -787,6 +794,14 @@ body {
     gap: 1rem;
   }
 
+  .nav-left {
+    gap: 1.5rem;
+  }
+
+  .nav-tabs {
+    gap: 1rem;
+  }
+
   .post-links {
     flex-direction: column;
   }
@@ -794,5 +809,137 @@ body {
   .meta-row {
     flex-wrap: wrap;
   }
+}
+
+/* About page styles */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.dark .about-section h2 {
+  color: #f9fafb;
+}
+
+.about-section p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.dark .about-section p {
+  color: #9ca3af;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.skill-category h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1a1a1a;
+}
+
+.dark .skill-category h3 {
+  color: #f9fafb;
+}
+
+.skill-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-category li {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.dark .skill-category li {
+  color: #9ca3af;
+}
+
+/* Contact page styles */
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  margin-bottom: 3rem;
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.dark .contact-section h2 {
+  color: #f9fafb;
+}
+
+.contact-section p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.dark .contact-section p {
+  color: #9ca3af;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+}
+
+.dark .contact-item h3 {
+  color: #f9fafb;
+}
+
+.contact-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.dark .contact-link {
+  color: #9ca3af;
+}
+
+.contact-link:hover {
+  color: #1a1a1a;
+}
+
+.dark .contact-link:hover {
+  color: #f9fafb;
 }
 

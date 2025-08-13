@@ -11,15 +11,21 @@ export default function Navigation() {
               <span className="logo-emphasis">M</span>ehdi <span className="logo-emphasis">Nouk</span>ra
             </span>
           </Link>
-        </div>
 
-        <div className="nav-center">
-          <Link href="/" className="nav-link">
-            Projects
-          </Link>
-          <Link href="/demo" className="nav-link">
-            Demo
-          </Link>
+          <div className="nav-tabs">
+            <Link href="/" className="nav-link">
+              Projects
+            </Link>
+            <Link href="/demo" className="nav-link">
+              Demo
+            </Link>
+            <Link href="/about" className="nav-link">
+              About
+            </Link>
+            <Link href="/contact" className="nav-link">
+              Contact
+            </Link>
+          </div>
         </div>
 
         <div className="nav-right">
