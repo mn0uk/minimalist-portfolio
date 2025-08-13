@@ -3,11 +3,8 @@ import Link from 'next/link';
 export default function Card({
   title,
   date,
-  category,
   description,
   author,
-  tags,
-  image,
   icon,
   href,
   external = false,
@@ -15,19 +12,13 @@ export default function Card({
 }) {
   const CardContent = () => (
     <div className={`card ${className}`}>
-      {image && (
-        <div className="card-image">
-          <img src={image} alt={title} />
-        </div>
-      )}
-
-      {icon && !image && (
+      {icon && (
         <div className="card-icon">
           {icon}
         </div>
       )}
 
-            <div className="card-content">
+      <div className="card-content">
         <div className="card-meta">
           <div className="meta-left">
             {author && (
@@ -58,26 +49,24 @@ export default function Card({
     </div>
   );
 
-  if (href) {
-    if (external) {
-      return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="card-link"
-        >
-          <CardContent />
-        </a>
-      );
-    }
+  if (!href) return <CardContent />;
 
+  if (external) {
     return (
-      <Link href={href} className="card-link">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card-link"
+      >
         <CardContent />
-      </Link>
+      </a>
     );
   }
 
-  return <CardContent />;
+  return (
+    <Link href={href} className="card-link">
+      <CardContent />
+    </Link>
+  );
 }

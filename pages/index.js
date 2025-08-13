@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { getProjects } from '../lib/github';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
-import CardGrid from '../components/CardGrid';
 
 export default function Home({ projects }) {
   return (
@@ -14,13 +13,13 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-            <Navigation />
+      <Navigation />
 
       <main className="container">
         <header className="header">
           <h1>Projects</h1>
           <p className="subtitle">
-            A collection of things I've built and problems I've solved.
+            A collection of problems I've solved through fun projects I've built.
           </p>
           <div className="header-links">
             <a href="/demo" className="demo-link">
@@ -29,7 +28,7 @@ export default function Home({ projects }) {
           </div>
         </header>
 
-        <CardGrid>
+        <div className="card-grid">
           {projects.map((project) => (
             <Card
               key={project.id}
@@ -39,22 +38,13 @@ export default function Home({ projects }) {
               date={project.updatedAt}
               href={`/posts/${project.slug}`}
               icon={
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
               }
             />
           ))}
-        </CardGrid>
+        </div>
 
         {projects.length === 0 && (
           <div className="empty-state">

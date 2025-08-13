@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Navigation from '../components/Navigation';
 import Card from '../components/Card';
-import CardGrid from '../components/CardGrid';
 
 export default function Demo() {
   const demoCards = [
@@ -95,7 +94,7 @@ export default function Demo() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-            <Navigation />
+      <Navigation />
 
       <main className="container">
         <header className="header">
@@ -105,7 +104,7 @@ export default function Demo() {
           </p>
         </header>
 
-        <CardGrid>
+        <div className="card-grid">
           {demoCards.map((card) => (
             <Card
               key={card.id}
@@ -117,22 +116,13 @@ export default function Demo() {
               href="#"
             />
           ))}
-        </CardGrid>
+        </div>
 
         <div className="demo-section">
           <h2>Card Variations</h2>
           <p>Different card styles and configurations:</p>
 
           <div className="card-variations">
-                                    <Card
-              title="Card with Image"
-              description="This card includes a featured image for visual appeal."
-              author="Demo User"
-              date="2024-01-20"
-              image="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop"
-              href="#"
-            />
-
             <Card
               title="External Link Card"
               description="This card links to an external website with proper security attributes."
